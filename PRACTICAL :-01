@@ -1,0 +1,165 @@
+# **Software Engineering and Project Management (SEPM) Practical Report**  
+### **Title:** Study of Software Development Life Cycle (SDLC)  
+
+---
+
+## **1. AIM**  
+To study and understand the **Software Development Life Cycle (SDLC)**, its phases, models, and practical implementation in software engineering.  
+
+---
+
+## **2. THEORY**  
+
+### **2.1 What is SDLC?**  
+The **Software Development Life Cycle (SDLC)** is a structured approach to **software development** that includes **planning, designing, developing, testing, deploying, and maintaining** a software system. It ensures **quality, efficiency, and cost-effectiveness** in software development.  
+
+### **2.2 Importance of SDLC**  
+✔ Helps in **systematic development** of software.  
+✔ Ensures **better project management**.  
+✔ Improves **software quality and security**.  
+✔ Minimizes **risks and failures**.  
+
+---
+
+## **3. OBJECTIVES**  
+✔ To understand the **different phases of SDLC**.  
+✔ To study **various SDLC models** and their use cases.  
+✔ To analyze the **advantages and disadvantages** of different SDLC models.  
+✔ To apply SDLC concepts to a real-world **Courier Management System**.  
+
+---
+
+## **4. PHASES OF SDLC**  
+
+### **Phase 1: Requirement Analysis**  
+✔ Identify **functional and non-functional** requirements.  
+✔ Gather requirements from **clients, stakeholders, and users**.  
+✔ Create **Software Requirement Specification (SRS)**.  
+
+### **Phase 2: System Design**  
+✔ Design **system architecture** and database structure.  
+✔ Create **UML diagrams** (Use Case, Class, Sequence diagrams).  
+✔ Plan **technology stack** (Frontend, Backend, Database).  
+
+### **Phase 3: Implementation (Coding & Development)**  
+✔ Convert **design into code** using programming languages.  
+✔ Use **best coding practices** and **version control** (Git).  
+✔ Implement **frontend, backend, and database connectivity**.  
+
+### **Phase 4: Testing**  
+✔ Perform **Unit Testing**, **Integration Testing**, and **System Testing**.  
+✔ Detect and fix **bugs and vulnerabilities**.  
+✔ Use **automated testing tools** (Selenium, JUnit).  
+
+### **Phase 5: Deployment**  
+✔ Deploy software on **servers or cloud platforms**.  
+✔ Perform **User Acceptance Testing (UAT)**.  
+✔ Configure **security measures** and backup plans.  
+
+### **Phase 6: Maintenance**  
+✔ Monitor system performance and fix issues.  
+✔ Provide **software updates and patches**.  
+✔ Optimize performance and user experience.  
+
+---
+
+## **5. SDLC MODELS**  
+
+### **5.1 Waterfall Model**  
+- **Sequential** development process.  
+- Each phase **depends on the previous phase**.  
+- Used for **small and well-defined projects**.  
+
+✔ **Advantages**: Simple, easy to manage.  
+✖ **Disadvantages**: No flexibility, high risk.  
+
+### **5.2 Agile Model**  
+- **Iterative and flexible** development.  
+- Divides work into **small sprints**.  
+- Used in **dynamic and evolving projects**.  
+
+✔ **Advantages**: Faster delivery, customer involvement.  
+✖ **Disadvantages**: Requires strong team collaboration.  
+
+### **5.3 Spiral Model**  
+- Combines **Waterfall and Agile approaches**.  
+- Focuses on **risk assessment and iterative development**.  
+- Suitable for **high-risk and large projects**.  
+
+✔ **Advantages**: Risk analysis, flexible.  
+✖ **Disadvantages**: Expensive, complex.  
+
+### **5.4 V-Model (Verification & Validation)**  
+- Each development phase has a **corresponding testing phase**.  
+- Ensures **early defect detection**.  
+
+✔ **Advantages**: Strong validation, good for safety-critical systems.  
+✖ **Disadvantages**: Rigid, high cost.  
+
+---
+
+## **6. SDLC IMPLEMENTATION FOR COURIER MANAGEMENT SYSTEM**  
+
+### **6.1 Requirement Analysis**  
+- **Actors**: Customer, Admin, Courier Staff.  
+- **Functionalities**:  
+  ✔ **Register/Login**  
+  ✔ **Schedule Pickup**  
+  ✔ **Track Parcel**  
+  ✔ **Make Payment**  
+  ✔ **Update Parcel Status**  
+
+### **6.2 System Design**  
+- **UML Diagrams**:  
+  ✔ **Use Case Diagram** (User interactions)  
+  ✔ **Class Diagram** (System structure)  
+  ✔ **Sequence Diagram** (Workflow)  
+
+### **6.3 Implementation (Coding & Development)**  
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: Python (Flask/Django) or Java (Spring Boot)  
+- **Database**: MySQL or MongoDB  
+
+### **6.4 Testing**  
+- **Unit Testing**: Checking individual modules.  
+- **Integration Testing**: Ensuring all modules work together.  
+- **User Testing**: Customer feedback.  
+
+### **6.5 Deployment**  
+- Deploy on **AWS, Azure, or Google Cloud**.  
+- Use **Docker for containerization**.  
+- Ensure **SSL security and database backups**.  
+
+### **6.6 Maintenance**  
+- Fixing **bugs and performance issues**.  
+- **Upgrading features** based on feedback.  
+
+---
+
+## **7. ADVANTAGES & DISADVANTAGES OF SDLC**  
+
+### **Advantages**  
+✔ Provides a **structured approach** to software development.  
+✔ Ensures **better planning and documentation**.  
+✔ Helps in **risk management and quality assurance**.  
+
+### **Disadvantages**  
+✖ Can be **time-consuming**.  
+✖ Some models **lack flexibility** for changing requirements.  
+✖ Requires **experienced teams** for proper execution.  
+
+---
+
+## **8. CONCLUSION**  
+In this practical, we studied the **Software Development Life Cycle (SDLC)** and its **phases, models, and applications**. We also **implemented SDLC concepts in the Courier Management System**, covering **requirement analysis, design, development, testing, deployment, and maintenance**. Understanding **SDLC is crucial for efficient and high-quality software development**.  
+
+---
+
+## **9. FUTURE SCOPE**  
+✔ **AI Integration**: Smart tracking and automated scheduling.  
+✔ **Blockchain**: Secure and tamper-proof courier transactions.  
+✔ **IoT & GPS**: Real-time parcel monitoring.  
+
+---
+
+This is a **complete and detailed practical report** on **SDLC** with implementation examples. Let me know if you need any modifications!
