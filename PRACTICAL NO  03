@@ -1,0 +1,80 @@
+# **Practical on Project Scheduling Using Gantt Chart**  
+
+## **Aim:**  
+To create a project schedule using a Gantt chart by identifying tasks, assigning resources, and setting up timelines for efficient project management.  
+
+## **Objective:**  
+1. Identify and list the tasks involved in a project.  
+2. Allocate resources to each task.  
+3. Develop a schedule and visualize it using a Gantt chart.  
+4. Monitor dependencies and optimize project execution.  
+
+---
+
+## **Step 1: Define the Project & Identify Tasks**  
+For this practical, we will consider the **Courier Management System** project. The key tasks involved are:  
+
+| **Task ID** | **Task Name**                 | **Duration** | **Dependencies** |
+|------------|--------------------------------|------------|-----------------|
+| T1         | Requirement Gathering         | 4 days     | -               |
+| T2         | System Design                 | 5 days     | T1              |
+| T3         | Database Design               | 3 days     | T2              |
+| T4         | Backend Development           | 7 days     | T3              |
+| T5         | Frontend Development          | 6 days     | T3              |
+| T6         | Integration & Testing         | 5 days     | T4, T5          |
+| T7         | Deployment                    | 3 days     | T6              |
+| T8         | Final Review & Submission     | 2 days     | T7              |
+
+---
+
+## **Step 2: Assign Resources**  
+Each task requires specific resources. The allocation is as follows:  
+
+| **Resource ID** | **Resource Name**        | **Assigned Task(s)** |
+|---------------|----------------------|-----------------|
+| R1            | Project Manager       | T1, T7, T8      |
+| R2            | System Analyst        | T1, T2          |
+| R3            | Database Engineer     | T3              |
+| R4            | Backend Developer     | T4              |
+| R5            | Frontend Developer    | T5              |
+| R6            | Tester                | T6              |
+
+---
+
+## **Step 3: Develop a Gantt Chart**  
+A **Gantt Chart** is used to visually represent the project schedule. Below is an example of how it would look:  
+
+| **Task Name**            | **Week 1** | **Week 2** | **Week 3** | **Week 4** |
+|-------------------------|-----------|-----------|-----------|-----------|
+| Requirement Gathering   | ████      |           |           |           |
+| System Design          |           | █████     |           |           |
+| Database Design        |           | ███       |           |           |
+| Backend Development    |           |           | ███████   |           |
+| Frontend Development   |           |           | █████     |           |
+| Integration & Testing  |           |           |           | █████     |
+| Deployment            |           |           |           | ███       |
+| Final Review          |           |           |           | ██        |
+
+*(█ represents work duration for each task.)*  
+
+---
+
+## **Step 4: Execution & Monitoring**  
+- If a task is delayed, dependencies need to be adjusted accordingly in the Gantt chart.  
+- Parallel tasks (e.g., backend and frontend development) help optimize time.  
+- Regular tracking ensures project deadlines are met.  
+
+---
+
+## **Conclusion:**  
+By using a **Gantt chart**, we effectively scheduled the **Courier Management System** project, assigned tasks to appropriate resources, and established a structured timeline for execution. This method ensures clear project tracking, avoids bottlenecks, and improves project efficiency.  
+
+---
+
+### **Practical Submission Checklist:**  
+✅ List of tasks with dependencies  
+✅ Assigned resources  
+✅ Gantt Chart (Excel/MS Project Screenshot)  
+✅ Monitoring and Adjustments  
+
+Would you like an Excel template or sample screenshots for submission?
