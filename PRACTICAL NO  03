@@ -9,7 +9,7 @@ To create a project schedule using a Gantt chart by identifying tasks, assigning
 3. Develop a schedule and visualize it using a Gantt chart.  
 4. Monitor dependencies and optimize project execution.  
 
----
+---6
 
 ## **Step 1: Define the Project & Identify Tasks**  
 For this practical, we will consider the **Courier Management System** project. The key tasks involved are:  
