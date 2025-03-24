@@ -1,0 +1,232 @@
+# **Software Engineering and Project Management (SEPM) Practical Report**  
+### **Title**: Modeling UML Use Case Diagrams and Capturing Use Case Scenarios for Courier Management System  
+
+---
+
+## **1. AIM**  
+The aim of this practical is to analyze and design a **Courier Management System** using **UML Use Case Diagrams**. This involves:  
+- Identifying **actors** and their roles.  
+- Defining **use cases** that describe system functionalities.  
+- Establishing relationships between actors and use cases.  
+- Creating a **UML Use Case Diagram** to visualize interactions.  
+- Writing **use case scenarios** to detail the flow of operations.  
+
+This practical helps in understanding the **functional requirements** of the system and aids in designing efficient software architecture.  
+
+---
+
+## **2. THEORY**  
+
+### **2.1 What is a Use Case Diagram?**  
+A **Use Case Diagram** is a behavioral UML diagram that represents **user interactions** with a system. It shows **who (actors)** interacts with **what (use cases)** and how they relate.  
+
+### **2.2 Why Use Case Diagrams?**  
+Use Case Diagrams help to:  
+✔ Identify system requirements early in development.  
+✔ Improve communication between developers and stakeholders.  
+✔ Provide a **visual representation** of the system's functionality.  
+✔ Guide the design and implementation process.  
+
+### **2.3 Elements of a Use Case Diagram**  
+
+| **Element**   | **Description** |
+|--------------|----------------|
+| **Actor**   | Represents a user or another system interacting with the system. |
+| **Use Case** | Describes a specific function or process in the system. |
+| **Association** | Shows the relationship between an actor and a use case. |
+| **Include** | Represents a mandatory relationship between two use cases. |
+| **Extend** | Represents an optional or conditional relationship between use cases. |
+| **System Boundary** | Defines the scope of the system. |
+
+---
+
+## **3. OBJECTIVES**  
+
+The objectives of this practical are:  
+✔ To analyze and identify the **actors** and **use cases** of the Courier Management System.  
+✔ To model **UML Use Case Diagrams** for the system.  
+✔ To document the **use case scenarios** for each functionality.  
+✔ To understand the interactions and dependencies within the system.  
+
+---
+
+## **4. IDENTIFYING ACTORS & USE CASES**  
+
+### **4.1 Actors in the Courier Management System**  
+
+| **Actor**          | **Description** |
+|--------------------|----------------|
+| **Customer**      | Requests courier services, tracks parcels, and makes payments. |
+| **Courier Staff** | Collects and delivers parcels, updates delivery status. |
+| **Admin**        | Manages system operations, users, and generates reports. |
+| **Payment Gateway** | Processes customer payments securely. |
+
+### **4.2 Use Cases in the Courier Management System**  
+
+| **Use Case**         | **Description** |
+|---------------------|----------------|
+| **Register/Login** | Allows customers and admin to authenticate. |
+| **Schedule Pickup** | Customers request parcel collection. |
+| **Track Parcel** | Customers check parcel status using a tracking ID. |
+| **Make Payment** | Customers pay for courier services. |
+| **Update Parcel Status** | Courier staff updates delivery progress. |
+| **Manage Orders** | Admin handles courier requests and deliveries. |
+| **Generate Reports** | Admin generates system reports for analysis. |
+
+---
+
+## **5. USE CASE DIAGRAM**  
+
+### **5.1 Description**  
+The **Use Case Diagram** for the Courier Management System represents the interaction between:  
+- **Customers**, who place pickup requests and track parcels.  
+- **Courier Staff**, who collect, deliver, and update parcel status.  
+- **Admins**, who manage orders and system data.  
+- **The Payment Gateway**, which handles payments.  
+
+### **5.2 UML Use Case Diagram Representation**  
+*(You can draw this using **Draw.io, Lucidchart, StarUML, or MS Visio**.)*  
+
+```
+   +------------------------------------------------------+
+   |         Courier Management System                   |
+   |                                                      |
+   | (Customer)  -------------> (Register/Login)         |
+   | (Customer)  -------------> (Schedule Pickup)        |
+   | (Customer)  -------------> (Track Parcel)           |
+   | (Customer)  -------------> (Make Payment)           |
+   | (Courier Staff)  --------> (Update Parcel Status)   |
+   | (Admin)  -------------> (Manage Orders)            |
+   | (Admin)  -------------> (Generate Reports)         |
+   | (Payment Gateway) -------> (Make Payment)          |
+   +------------------------------------------------------+
+```
+
+---
+
+## **6. USE CASE SCENARIOS**  
+
+### **6.1 Use Case Scenario: "Track Parcel"**  
+
+**Actors**: Customer  
+
+**Preconditions**:  
+✔ Customer must have a valid tracking number.  
+✔ The parcel must be registered in the system.  
+
+**Flow of Events**:  
+1. The customer logs into the system.  
+2. The system displays the tracking input field.  
+3. The customer enters the tracking number.  
+4. The system fetches the current status from the database.  
+5. The system displays parcel location, expected delivery date, and updates.  
+
+**Postconditions**: The customer receives **real-time parcel status**.  
+
+---
+
+### **6.2 Use Case Scenario: "Schedule Pickup"**  
+
+**Actors**: Customer, Courier Staff  
+
+**Preconditions**:  
+✔ The customer must be registered.  
+✔ The pickup location must be valid.  
+
+**Flow of Events**:  
+1. The customer logs into the system.  
+2. The customer selects "Schedule Pickup."  
+3. The system prompts for package details (weight, dimensions, type).  
+4. The system assigns the nearest **Courier Staff** for pickup.  
+5. The courier staff is notified and collects the parcel.  
+6. The system updates the pickup status.  
+
+**Postconditions**: The parcel is successfully collected.  
+
+---
+
+### **6.3 Use Case Scenario: "Make Payment"**  
+
+**Actors**: Customer, Payment Gateway  
+
+**Preconditions**:  
+✔ The customer must have an unpaid order.  
+✔ The payment gateway must be available.  
+
+**Flow of Events**:  
+1. The customer selects "Make Payment."  
+2. The system displays payment options (Credit/Debit Card, UPI, etc.).  
+3. The customer selects a method and enters details.  
+4. The system sends the request to the **Payment Gateway**.  
+5. The gateway processes the payment and returns success/failure.  
+6. If successful, the system updates the order status to "Paid."  
+7. The customer receives confirmation and an invoice.  
+
+**Postconditions**: The order status is updated, and the courier is dispatched.  
+
+---
+
+## **7. CONCLUSION**  
+In this practical, we successfully:  
+✔ Identified key **actors** and **use cases** for the **Courier Management System**.  
+✔ Modeled **UML Use Case Diagrams** to visualize interactions.  
+✔ Captured **use case scenarios** to describe functional workflows.  
+
+This study improves **system design**, enhances **requirement understanding**, and helps in **efficient software development**.  
+
+---
+
+## **8. FUTURE SCOPE**  
+- Implement **real-time parcel tracking** using GPS.  
+- Integrate **AI-based delivery time estimation**.  
+- Improve **user experience** with a mobile-friendly interface.  
+
++----------------+
+|     User       |  
+|----------------|
+| - userID       |
+| - name         |
+| - email        |
+| - phone        |
+|----------------|
+| + login()      |
+| + logout()     |
++----------------+
+       ▲  
+       │  
++-------------------+      +-------------------+  
+|   Customer        |      |  CourierStaff     |  
+|-------------------|      |-------------------|  
+| - address         |      | - staffID         |  
+| - orderHistory.   |—————>| - assignedParcels |  
+|-------------------|      |-------------------|  
+| + schedulePickup()|      | + updateStatus()  |  
+| + trackParcel()   |      | + deliverParcel() |  
++----------------+         +------------------+  
+       ^     
+       │  
+       | 
++--------------------+  
+|     Order          |  
+|--------------------|  
+| - orderID          |  
+| - sender           |  
+| - receiver         |  
+| - parcelID         |  
+| - status           |  
+|--------------------|  
+| + generateInvoice()|  
++--------------------+  
+       │  
+       │  
++-------------------+      +-----------------+  
+|    Payment        |      |   Tracking      |  
+|-------------------|      |-----------------|  
+| - paymentID       |      | - trackingID    |  
+| - amount          |——————| - location      |  
+| - status          |      | - deliveryDate  |  
+|-------------------|      |-----------------|  
+| + processPayment()|      | + updateStatus()|  
+| + refund()        |      | + getStatus()   |  
++-------------------+      +-----------------+  
+
