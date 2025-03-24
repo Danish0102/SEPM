@@ -1,0 +1,205 @@
+# **Software Engineering and Project Management (SEPM) Practical Report**  
+### **Title:** Modeling Data Flow Diagram (DFD) & Control Flow Diagram (CFD) for Courier Management System  
+
+---
+
+## **1. AIM**  
+The aim of this practical is to study and model:  
+- **Data Flow Diagram (DFD):** To represent the flow of data in the **Courier Management System (CMS)**.  
+- **Control Flow Diagram (CFD):** To illustrate the **process flow and decision-making** in the system.  
+
+This helps in understanding the **functional and control aspects** of CMS for better system design.  
+
+---
+
+## **2. THEORY**  
+
+### **2.1 What is a Data Flow Diagram (DFD)?**  
+A **DFD** is a graphical representation that shows:  
+✔ **Processes** that transform data.  
+✔ **Data stores** where information is kept.  
+✔ **External entities** interacting with the system.  
+✔ **Data flow** between components.  
+
+### **2.2 Levels of DFD**  
+| **Level**  | **Description** |
+|------------|----------------|
+| **Level 0 (Context Diagram)** | High-level overview of the system. |
+| **Level 1** | Expands Level 0, showing main processes. |
+| **Level 2+** | Further breakdown of complex processes. |
+
+---
+
+### **2.3 What is a Control Flow Diagram (CFD)?**  
+A **CFD** represents the **flow of control** in the system using **conditions, loops, and decision-making logic**.  
+✔ **Nodes** represent operations or conditions.  
+✔ **Arrows** indicate the flow of execution.  
+
+**CFD is useful for:**  
+✔ Analyzing **decision-making** in the system.  
+✔ Identifying **logical flow and process execution order**.  
+
+---
+
+## **3. OBJECTIVES**  
+✔ To create a **DFD for CMS** showing data flow between users, system, and processes.  
+✔ To design a **CFD for CMS** illustrating logical control flow.  
+✔ To understand **process interactions and system behavior**.  
+
+---
+
+## **4. CASE STUDY: COURIER MANAGEMENT SYSTEM**  
+
+### **4.1 Actors in CMS**  
+✔ **Customer** – Places courier orders, tracks parcels, makes payments.  
+✔ **Courier Staff** – Collects parcels, updates delivery status.  
+✔ **Admin** – Manages orders, users, and generates reports.  
+✔ **Payment Gateway** – Handles transactions.  
+
+---
+
+## **5. DATA FLOW DIAGRAM (DFD) FOR CMS**  
+
+### **5.1 Level 0 - Context Diagram (High-Level View)**  
+- **External Entities:** Customer, Courier Staff, Admin, Payment Gateway.  
+- **Processes:** Order Processing, Parcel Tracking, Payment Processing.  
+- **Data Stores:** Customer Database, Order Database, Tracking Database.  
+
+```
+  +------------------------+
+  |     Customer           |
+  |------------------------|
+  |  - Places Order        |
+  |  - Tracks Parcel       |
+  |  - Makes Payment       |
+  +------------------------+
+          │
+          ▼
++---------------------------+          +---------------------------+
+|   Courier Management      |--------->|    Admin (Manages Orders)  |
+|        System             |          +---------------------------+
+|---------------------------|
+|  1. Process Order         |
+|  2. Update Parcel Status  |
+|  3. Payment Processing    |
++---------------------------+
+          │
+          ▼
+ +------------------------+
+ |  Courier Staff         |
+ |------------------------|
+ | - Collects Parcels     |
+ | - Updates Status       |
+ +------------------------+
+```
+
+---
+
+### **5.2 Level 1 DFD - Breaking Down Processes**  
+
+#### **1. Order Processing**  
+✔ Customer provides parcel details → System **stores order** in database.  
+✔ Admin **verifies** order and assigns **courier staff**.  
+
+#### **2. Parcel Tracking**  
+✔ Customer **enters tracking ID** → System retrieves **status from tracking DB**.  
+
+#### **3. Payment Processing**  
+✔ Customer **selects payment method** → Payment Gateway **processes transaction**.  
+✔ **On success:** Order is confirmed.  
+
+```
+      +-------------+             +--------------+
+      |  Customer   |------------>|  Order System|
+      +-------------+             +--------------+
+               |                        |
+               ▼                        ▼
+      +------------------+     +------------------+
+      |  Admin           |---->|  Courier Staff   |
+      +------------------+     +------------------+
+```
+
+---
+
+## **6. CONTROL FLOW DIAGRAM (CFD) FOR CMS**  
+
+### **6.1 Understanding Control Flow in CMS**  
+✔ **Decisions**: Accepting orders, verifying payments, tracking parcels.  
+✔ **Loops**: Checking parcel status, updating order database.  
+✔ **Conditional Branching**: If **payment fails**, request retry.  
+
+---
+
+### **6.2 CFD Representation of Order Processing**  
+
+1️⃣ Customer logs in → **Checks account**  
+2️⃣ If **new order**, enter parcel details → **Submit request**  
+3️⃣ Admin **verifies order**  
+   - If **approved** → Assign **courier staff**  
+   - If **rejected** → Notify **customer**  
+4️⃣ Courier **collects parcel**  
+5️⃣ If **successful delivery**, update status  
+6️⃣ If **failed**, notify admin for reattempt  
+
+---
+
+### **6.3 CFD Diagram (Logic Flow)**  
+
+```
+       [Start]
+          │
+          ▼
+     (Login Page)
+          │
+          ▼
+  [Enter Parcel Details] → (Validate Order) → [Order Verified?] → (Yes) → [Assign Courier]
+          │                               │
+          ▼                               ▼
+        (No)                            (Pickup Request)
+          │                               │
+          ▼                               ▼
+    [Reject Order]                   [Courier Pickup]
+          │                               │
+          ▼                               ▼
+     [Notify User]                 [Update Tracking Status]
+          │                               │
+          ▼                               ▼
+      (End)                            (Delivery Success?) 
+                                          │
+                                         ▼
+                             (Yes) → [Update Order Status]
+                             (No)  → [Retry Delivery]
+```
+
+---
+
+## **7. ADVANTAGES OF DFD & CFD**  
+
+### **7.1 Advantages of DFD**  
+✔ Helps in **understanding data movement** in the system.  
+✔ Clearly defines **user interactions** and **data processing**.  
+✔ Useful for **database and system architecture design**.  
+
+### **7.2 Advantages of CFD**  
+✔ Shows **logical flow of decisions and loops**.  
+✔ Helps in **identifying errors in decision-making**.  
+✔ Useful for **programming and control logic implementation**.  
+
+---
+
+## **8. CONCLUSION**  
+- The **DFD of CMS** provides a **clear picture of data movement** across users, databases, and processes.  
+- The **CFD helps visualize decision-making** in the system, aiding in **logical process development**.  
+- These diagrams are **essential for designing** an efficient **Courier Management System**.  
+
+---
+
+## **9. FUTURE SCOPE**  
+✔ Implement **real-time tracking** using GPS in the system.  
+✔ Use **machine learning for route optimization**.  
+✔ Integrate **automated chatbot support** for courier queries.  
+
+---
+
+### **Final Notes:**  
+This report covers **Data Flow Diagram (DFD) & Control Flow Diagram (CFD)** for **Courier Management System** in **detailed and structured** form. Let me know if you need **graphical diagrams** or modifications!
