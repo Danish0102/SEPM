@@ -1,0 +1,123 @@
+Here’s a **complete and detailed Practical Report** for **Practical No. 7: Modeling Sequence Diagrams** based on your **Courier Management System (CMS)**:
+
+---
+
+# **SEPM Practical Report**  
+### **Practical No. 7: Modeling Sequence Diagram for Courier Management System**
+
+---
+
+## **1. AIM**  
+To model a **Sequence Diagram** for the **Courier Management System**, demonstrating object interactions in a time-sequenced order for use cases like placing and tracking courier orders.
+
+---
+
+## **2. THEORY**
+
+### **2.1 What is a Sequence Diagram?**  
+A **Sequence Diagram** is a type of **UML Interaction Diagram** that shows how objects interact with each other through messages over time. It highlights the sequence of messages exchanged to carry out system functionality.
+
+---
+
+### **2.2 Key Elements in a Sequence Diagram**
+
+| **Element**        | **Description** |
+|--------------------|------------------|
+| **Object**          | Represents an instance of a class involved in interaction |
+| **Lifeline**        | Vertical dashed line representing the object's life during interaction |
+| **Activation Bar**  | Narrow rectangle on lifeline showing object activity |
+| **Messages**        | Communication between objects (synchronous/asynchronous) |
+| **Return Messages** | Dashed arrows showing response from message calls |
+
+---
+
+## **3. OBJECTIVES**
+
+✔ To understand dynamic behavior of the system.  
+✔ To identify sequence of communication between objects.  
+✔ To draw sequence diagram for courier operations like placing and tracking an order.
+
+---
+
+## **4. CASE STUDY: Courier Management System**
+
+### **Scenario 1: Placing a Courier Order**
+
+**Actors/Objects Involved:**
+- Customer  
+- Order System  
+- Courier Staff  
+- Payment System  
+- Admin  
+
+**Flow:**
+1. Customer logs in.
+2. Customer places a courier order.
+3. Order is created by the system.
+4. Admin assigns courier staff.
+5. Payment is processed.
+6. Confirmation is sent to the customer.
+
+---
+
+## **5. UML SEQUENCE DIAGRAM**
+
+```plaintext
+Customer    OrderSystem   Admin   CourierStaff   PaymentSystem
+
+   |             |           |          |             |
+---| login()     |           |          |             |
+   |-----------> |           |          |             |
+   |             |           |          |             |
+---| placeOrder()|           |          |             |
+   |-----------> |           |          |             |
+   |             | createOrder()        |             |
+   |             |------------------->  |             |
+   |             |           | assignCourier()        |
+   |             |           |--------------------->  |
+   |             |           |          |             |
+   |             |           |          | confirm()   |
+   |             |           |          |-----------> |
+   |             |           |          |             |
+   |             | paymentDetails()    |             |
+   |             |--------------------------------->  |
+   |             |           |          |             |
+   |             |  <-------- confirmation            |
+   | <-----------|           |          |             |
+```
+
+---
+
+## **6. EXPLANATION**
+
+This diagram shows the process of **placing a courier order**:
+- The **Customer** initiates the order.
+- The **Order System** handles order creation.
+- The **Admin** assigns a **Courier Staff**.
+- The **Payment System** processes the transaction.
+- Confirmation flows back through the system to the customer.
+
+---
+
+## **7. ADVANTAGES OF SEQUENCE DIAGRAM**
+
+✔ Helps in understanding object interactions.  
+✔ Defines system functionality dynamically.  
+✔ Useful for validating system architecture.  
+✔ Clarifies message passing between modules.
+
+---
+
+## **8. CONCLUSION**  
+The Sequence Diagram effectively visualizes the **order of interactions** among objects in the Courier Management System. It helps in understanding system behavior and designing better interaction workflows.
+
+---
+
+## **9. FUTURE SCOPE**  
+✔ Add alternate scenarios (e.g., failed payment).  
+✔ Model additional use cases like parcel tracking.  
+✔ Use for unit and integration testing reference.
+
+---
+
+!
