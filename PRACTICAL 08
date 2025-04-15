@@ -1,0 +1,106 @@
+
+---
+
+# **SEPM Practical Report**  
+### **Practical No. 8: Designing Test Suites for Courier Management System**
+
+---
+
+## **1. AIM**  
+To understand the importance of software testing and design effective test cases for the Courier Management System using appropriate testing techniques and frameworks.
+
+---
+
+## **2. THEORY**
+
+### **What is Software Testing?**  
+Software Testing is the process of evaluating and verifying that a software application functions as expected. It ensures that the software is **bug-free**, **reliable**, and meets **user requirements**.
+
+### **Need for Software Testing**  
+- To identify defects before release.  
+- To ensure software quality and reliability.  
+- To validate functional and non-functional requirements.  
+- To ensure user satisfaction and system performance.
+
+---
+
+### **Testing Frameworks**  
+A testing framework is a set of rules or guidelines used for creating and designing test cases. Some common frameworks include:
+- **JUnit** (for Java)
+- **PyTest / UnitTest** (for Python)
+- **Selenium** (for automated UI testing)
+- **TestNG** (for test configuration)
+
+---
+
+### **Types of Software Testing**
+
+| Type               | Description |
+|--------------------|-------------|
+| **Unit Testing**     | Tests individual units or components of the software. |
+| **Integration Testing** | Verifies interaction between multiple components or modules. |
+| **System Testing**     | Validates the entire system as a whole. |
+| **Acceptance Testing** | Ensures the system meets business and user needs. |
+
+---
+
+## **3. OBJECTIVES**
+
+✔ To understand the role and need for software testing.  
+✔ To explore different types of testing methods.  
+✔ To design test cases for the Courier Management System.  
+✔ To ensure error detection at unit and integration levels.  
+✔ To evaluate the functionality of the software.  
+✔ To gain hands-on practice in creating structured test suites.
+
+---
+
+## **4. CASE STUDY: Courier Management System (CMS)**
+
+### **Scenario:**  
+Test the **"Place Order"**, **"Login"**, **"Track Order"**, and **"Assign Staff"** functionalities of the Courier Management System.
+
+---
+
+## **5. TEST CASES (Format: CASE STUDY - VLAB STYLE)**
+
+| **Test Case ID** | **Module**      | **Test Scenario**                 | **Test Steps**                            | **Expected Result**               | **Actual Result** | **Status** |
+|------------------|------------------|-----------------------------------|-------------------------------------------|----------------------------------|-------------------|------------|
+| TC_01            | Login            | User Login with valid credentials | Enter username & password, click login    | Dashboard is displayed            | As expected       | Pass       |
+| TC_02            | Login            | Login with invalid credentials    | Enter wrong credentials and click login   | Error message is shown            | As expected       | Pass       |
+| TC_03            | Place Order      | Place a new courier order         | Fill order form and submit                | Order ID is generated             | As expected       | Pass       |
+| TC_04            | Track Order      | Track an order using tracking ID  | Enter valid tracking ID                   | Show current order status         | As expected       | Pass       |
+| TC_05            | Assign Staff     | Assign delivery staff by admin    | Select order and staff, assign            | Assignment confirmation displayed | As expected       | Pass       |
+| TC_06            | Payment          | Process payment for an order      | Enter card details and confirm            | Payment success message            | As expected       | Pass       |
+
+---
+
+## **6. UNIT TESTING EXAMPLE**
+
+**Function:** `calculateDeliveryCost(weight, distance)`  
+**Test Input:** weight = 5kg, distance = 100km  
+**Expected Output:** ₹250  
+**Result:** Pass
+
+---
+
+## **7. INTEGRATION TESTING SCENARIO**  
+**Modules Involved:** Order Module + Payment Module  
+**Test Scenario:** Place order → Redirect to Payment → Confirm Payment  
+**Expected Result:** Payment confirmed, Order marked as paid  
+**Actual Result:** As expected  
+**Status:** Pass
+
+---
+
+## **8. CONCLUSION**  
+Designing and executing test suites ensures the functionality, stability, and performance of the Courier Management System. Testing helps catch bugs early, improve quality, and deliver a reliable software product.
+
+---
+
+## **9. FUTURE SCOPE**  
+✔ Implement automated testing using Selenium or JUnit  
+✔ Extend test cases to include negative and edge scenarios  
+✔ Perform load and security testing for system robustness
+
+---
