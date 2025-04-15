@@ -1,0 +1,200 @@
+Practical Here's a **complete and detailed practical report** for your **6th SEPM Practical** on **Modeling UML Class Diagrams**, specifically applied to a **Courier Management System (CMS)**:
+
+---
+
+# **SEPM Practical Report**  
+### **Practical No. 6: Modeling UML Class Diagrams for Courier Management System**
+
+---
+
+## **1. AIM**  
+To study and model the **UML Class Diagram** for the **Courier Management System (CMS)**, focusing on its **structural and behavioral components**, classes, attributes, methods, and relationships.
+
+---
+
+## **2. THEORY**
+
+### **2.1 What is a UML Class Diagram?**  
+A **UML Class Diagram** is a **static structure diagram** that describes the **structure of a system** by showing:  
+- **Classes**
+- **Attributes**
+- **Methods (Operations)**
+- **Relationships** between objects  
+
+It is used in **object-oriented modeling** to define the **blueprint of system components**.
+
+---
+
+### **2.2 Structural and Behavioral Aspects**
+
+| **Aspect**    | **Description** |
+|---------------|------------------|
+| **Structural** | Focuses on how classes are related—includes attributes and associations. |
+| **Behavioral** | Captures how classes behave—includes operations and relationships such as inheritance and dependencies. |
+
+---
+
+### **2.3 Elements of Class Diagram**
+
+- **Class:** Blueprint with attributes and operations.  
+- **Attribute:** Properties/data members of the class.  
+- **Operation:** Functions or methods defined in the class.  
+- **Relationships:**
+  - **Association:** A “has-a” relationship between classes.
+  - **Aggregation:** A special form of association; “whole-part” relationship.
+  - **Composition:** Stronger form of aggregation.
+  - **Inheritance:** An “is-a” relationship (generalization).
+  - **Dependency:** A class depends on another for implementation.
+
+---
+
+## **3. OBJECTIVES**
+
+✔ To identify and define key **classes** in Courier Management System.  
+✔ To represent **attributes and methods** of each class.  
+✔ To identify **relationships** like association, inheritance, and aggregation.  
+✔ To create a **UML Class Diagram** showing system structure.
+
+---
+
+## **4. CASE STUDY: Courier Management System**
+
+### **Main Actors / Roles**
+- **Customer**
+- **Courier Staff**
+- **Admin**
+- **Order**
+- **Payment**
+- **Tracking System**
+
+### **Key Functionalities**
+- Placing and managing courier orders  
+- Assigning delivery staff  
+- Real-time parcel tracking  
+- Payment processing  
+- Report generation by admin  
+
+---
+
+## **5. IDENTIFICATION OF CLASSES**
+
+| **Class**        | **Attributes**                                       | **Methods** |
+|------------------|------------------------------------------------------|-------------|
+| **Customer**      | customerID, name, address, phone, email              | register(), login(), placeOrder() |
+| **Order**         | orderID, orderDate, deliveryAddress, status         | createOrder(), cancelOrder(), trackOrder() |
+| **CourierStaff**  | staffID, name, phone, assignedOrders                | updateStatus(), collectParcel() |
+| **Admin**         | adminID, name, email                                | manageUsers(), viewReports(), assignCourier() |
+| **Payment**       | paymentID, amount, paymentDate, paymentStatus       | makePayment(), verifyPayment() |
+| **Tracking**      | trackingID, orderID, currentLocation, statusUpdate  | updateLocation(), getTrackingInfo() |
+
+---
+
+## **6. UML CLASS DIAGRAM: CMS**
+
+```
++-----------------+          +-------------------+
+|   Customer      |          |     Admin         |
++-----------------+          +-------------------+
+| - customerID    |          | - adminID         |
+| - name          |          | - name            |
+| - address       |          | - email           |
+| - phone         |          +-------------------+
+| - email         |          | +assignCourier()  |
++-----------------+          | +manageUsers()    |
+| +register()     |          | +viewReports()    |
+| +login()        |          +-------------------+
+| +placeOrder()   |
++--------+--------+
+         |
+         | 1..* places
+         ▼
++-----------------+
+|     Order       |
++-----------------+
+| - orderID       |
+| - orderDate     |
+| - deliveryAddr  |
+| - status        |
++-----------------+
+| +createOrder()  |
+| +cancelOrder()  |
+| +trackOrder()   |
++--------+--------+
+         |
+         | 1 assigned to
+         ▼
++------------------+
+|  CourierStaff    |
++------------------+
+| - staffID        |
+| - name           |
+| - phone          |
+| - assignedOrders |
++------------------+
+| +collectParcel() |
+| +updateStatus()  |
++--------+---------+
+         |
+         | 1 has
+         ▼
++------------------+
+|    Tracking      |
++------------------+
+| - trackingID     |
+| - currentLoc     |
+| - statusUpdate   |
++------------------+
+| +updateLocation()|
+| +getTrackingInfo()|
++--------+---------+
+         |
+         | 1 paid by
+         ▼
++------------------+
+|    Payment       |
++------------------+
+| - paymentID      |
+| - amount         |
+| - date           |
+| - status         |
++------------------+
+| +makePayment()   |
+| +verifyPayment() |
++------------------+
+```
+
+---
+
+## **7. RELATIONSHIPS IN THE DIAGRAM**
+
+| **Type**       | **Example** |
+|----------------|-------------|
+| **Association** | Customer places Order |
+| **Aggregation** | Order has Payment, Tracking |
+| **Inheritance** | Not shown here but could be used for types of Users (Customer, Admin, Staff as subclasses of User) |
+| **Multiplicity** | 1 Customer can place many Orders (1..*) |
+
+---
+
+## **8. ADVANTAGES OF CLASS DIAGRAM IN CMS**
+
+✔ Identifies system components and their responsibilities.  
+✔ Helps in **modular system design**.  
+✔ Clarifies **interactions between classes**.  
+✔ Supports **code generation** in OOP languages.  
+
+---
+
+## **9. CONCLUSION**  
+The UML Class Diagram helps in visualizing the **structure of the Courier Management System** by defining key classes, their attributes, operations, and relationships. It serves as a **foundation for object-oriented design and implementation**.
+
+---
+
+## **10. FUTURE SCOPE**  
+✔ Extend diagram with **inheritance** (e.g., different types of users).  
+✔ Add **interfaces** for payment gateways or notification systems.  
+✔ Integrate **state and activity diagrams** for further design clarity.  
+
+---
+
+ 
